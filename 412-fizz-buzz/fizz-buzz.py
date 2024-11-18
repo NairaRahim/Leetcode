@@ -3,13 +3,15 @@ class Solution:
         result = []
         for i in range(1,n+1):
             ans = ""
-            if i%3 == 0:
-                ans += "Fizz"
-            if i%5 == 0:
-                ans +="Buzz"
-            if ans == "":
-                ans += str(i)
-            result.append(ans)    
+            # print(i%3 ==0)
+            if i%15==0:
+                result.append("FizzBuzz")
+            elif i%3 == 0:
+                result.append("Fizz")
+            elif i%5 == 0:
+                result.append("Buzz")
+            else:
+                result.append(str(i))
     
         return result
 
